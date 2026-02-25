@@ -15,6 +15,7 @@ spec:
       containers:
       - name: webquerydb
         image: fra.ocir.io/fr03kzmuvhtf/marc/webquerydb:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
       imagePullSecrets:
