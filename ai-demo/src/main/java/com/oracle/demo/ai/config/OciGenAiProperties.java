@@ -15,7 +15,7 @@ public class OciGenAiProperties {
   private Double temperature = 0.3;
   private Double topP = 0.75;
   private Integer topK;
-  private Integer maxTokens = 600;
+  private Integer maxTokens = 1200;
   private Integer historyLimit = 8;
   private String systemPrompt =
       "You are a helpful assistant for Oracle Cloud users. Keep answers concise and practical.";

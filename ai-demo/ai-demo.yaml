@@ -21,7 +21,7 @@ spec:
       automountServiceAccountToken: true
       containers:
       - name: ai-demo
-        image: kix.ocir.io/sdud3frigryb/oke-registry/ai-demo:v1
+        image: kix.ocir.io/sdud3frigryb/oke-registry/ai-demo:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -55,8 +55,7 @@ kind: Service
 metadata:
   name: ai-demo-service
 spec:
-  # type: LoadBalancer
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 80
     protocol: TCP

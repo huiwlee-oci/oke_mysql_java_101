@@ -4,5 +4,5 @@ SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" >/dev/null 2>&1 && pwd)
 
 IMAGE_REPO="${AI_DEMO_IMAGE_REPO:-$DOCKER_PREFIX/ai-demo}"
 
-docker tag ai-demo:v1 "$IMAGE_REPO:v1"
-docker push "$IMAGE_REPO:v1"
+docker tag ai-demo:v2 "$IMAGE_REPO:v2"
+docker push "$IMAGE_REPO:v2"

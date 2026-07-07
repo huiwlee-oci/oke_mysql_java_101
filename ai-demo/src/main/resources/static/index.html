@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>OCI GenAI Chat</title>
+    <title>OCI Generative AI Lab Copilot</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -11,26 +11,70 @@
       <section class="chat-panel" aria-label="OCI Generative AI chat">
         <header class="topbar">
           <div class="brand-lockup">
-            <div class="brand-mark" aria-hidden="true">AI</div>
+            <div class="brand-mark" aria-hidden="true">OCI</div>
             <div>
-              <h1>OCI GenAI Chat</h1>
+              <h1>OCI Generative AI Lab Copilot</h1>
               <p id="statusText">Ready</p>
             </div>
           </div>
-          <button id="clearButton" class="icon-button" type="button" title="New conversation" aria-label="New conversation">
-            <span aria-hidden="true">+</span>
-          </button>
+          <button id="clearButton" class="text-button" type="button">New chat</button>
         </header>
 
-        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+        <div class="workspace">
+          <aside class="demo-rail" aria-label="Lab context">
+            <section class="rail-section">
+              <p class="section-label">Runtime</p>
+              <div id="configGrid" class="config-grid" aria-live="polite">
+                <div class="config-item">
+                  <span>Region</span>
+                  <strong>Loading</strong>
+                </div>
+                <div class="config-item">
+                  <span>Model</span>
+                  <strong>Loading</strong>
+                </div>
+              </div>
+            </section>
 
-        <form id="chatForm" class="composer">
-          <label class="sr-only" for="messageInput">Message</label>
-          <textarea id="messageInput" rows="1" maxlength="4000" autocomplete="off" placeholder="Message OCI GenAI"></textarea>
-          <button id="sendButton" class="send-button" type="submit" aria-label="Send message">
-            <span aria-hidden="true">Send</span>
-          </button>
-        </form>
+            <section class="rail-section">
+              <p class="section-label">Showcase Prompts</p>
+              <div id="promptList" class="prompt-list"></div>
+            </section>
+
+            <section class="rail-section">
+              <p class="section-label">Session</p>
+              <dl class="metric-list">
+                <div>
+                  <dt>Messages</dt>
+                  <dd id="messageCount">0</dd>
+                </div>
+                <div>
+                  <dt>Last latency</dt>
+                  <dd id="latencyValue">-</dd>
+                </div>
+                <div>
+                  <dt>Last request</dt>
+                  <dd id="requestIdValue">-</dd>
+                </div>
+              </dl>
+            </section>
+          </aside>
+
+          <section class="conversation" aria-label="Conversation">
+            <div id="chatLog" class="chat-log" aria-live="polite"></div>
+
+            <form id="chatForm" class="composer">
+              <label class="sr-only" for="messageInput">Message</label>
+              <div class="input-wrap">
+                <textarea id="messageInput" rows="1" maxlength="8000" autocomplete="off" placeholder="Ask a question"></textarea>
+                <div class="composer-meta">
+                  <span id="charCount">0 / 8000</span>
+                </div>
+              </div>
+              <button id="sendButton" class="send-button" type="submit">Send</button>
+            </form>
+          </section>
+        </div>
       </section>
     </main>
 
