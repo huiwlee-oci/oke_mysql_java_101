@@ -1,0 +1,6 @@
+target/
+.mvn-local/
+.m2-repository/
+.classpath
+.project
+.settings/

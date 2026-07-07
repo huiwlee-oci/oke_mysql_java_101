@@ -1,0 +1,12 @@
+.m2-repository/
+.mvn-local/
+.git/
+src/
+.mvn/
+mvnw
+mvnw.cmd
+README.md
+*.yaml
+bin/
+target/*
+!target/ai-demo-0.0.1-SNAPSHOT.jar

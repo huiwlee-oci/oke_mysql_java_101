@@ -1,1 +1,2 @@
 bin/env.sh
+setup/ocir-secret.yaml

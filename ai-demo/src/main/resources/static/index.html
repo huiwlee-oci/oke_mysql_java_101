@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OCI GenAI Chat</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="OCI Generative AI chat">
+        <header class="topbar">
+          <div class="brand-lockup">
+            <div class="brand-mark" aria-hidden="true">AI</div>
+            <div>
+              <h1>OCI GenAI Chat</h1>
+              <p id="statusText">Ready</p>
+            </div>
+          </div>
+          <button id="clearButton" class="icon-button" type="button" title="New conversation" aria-label="New conversation">
+            <span aria-hidden="true">+</span>
+          </button>
+        </header>
+
+        <div id="chatLog" class="chat-log" aria-live="polite"></div>
+
+        <form id="chatForm" class="composer">
+          <label class="sr-only" for="messageInput">Message</label>
+          <textarea id="messageInput" rows="1" maxlength="4000" autocomplete="off" placeholder="Message OCI GenAI"></textarea>
+          <button id="sendButton" class="send-button" type="submit" aria-label="Send message">
+            <span aria-hidden="true">Send</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: db-secret
 data:
-  password: V2VsY29tZTEh
+  password: V2VsY29tZV9fXzEK
   username: cm9vdA==
 ---
 apiVersion: v1
@@ -60,7 +60,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: mysql/mysql-server:latest
+      - image: docker.io/mysql/mysql-server:latest
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD

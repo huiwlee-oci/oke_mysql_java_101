@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ai-demo-config
+data:
+  OCI_GENAI_AUTH_MODE: "oke_workload_identity"
+  OCI_GENAI_REGION: "ap-osaka-1"
+  OCI_GENAI_COMPARTMENT_ID: "ocid1.compartment.oc1..aaaaaaaal7lcscpulsg4ugvwg63uxp5wjvebxn7iksnyksmiwkmx7ldcg4qq"
+  OCI_GENAI_MODEL_ID: "cohere.command-a-03-2025"
+  OCI_GENAI_CHAT_FORMAT: "cohere"
+  OCI_GENAI_TEMPERATURE: "0.3"
+  OCI_GENAI_TOP_P: "0.75"
+  OCI_GENAI_MAX_TOKENS: "600"
+  OCI_GENAI_HISTORY_LIMIT: "8"
+  OCI_GENAI_SYSTEM_PROMPT: "You are a helpful assistant for Oracle Cloud users. Keep answers concise and practical."
